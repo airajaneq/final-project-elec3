@@ -1,0 +1,161 @@
+/* ==========================
+   THEME VARIABLES
+========================== */
+:root {
+  --bg: #0f0f14;
+  --card: #181824;
+  --text: #f4f4f7;
+  --muted: #a8a8b6;
+  --border: rgba(255,255,255,0.12);
+  --accent: #4d7cff;
+  --shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #14141c;
+  --muted: #5c5c70;
+  --border: rgba(0,0,0,0.15);
+  --accent: #275eff;
+  --shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   GLOBAL
+========================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 30px 16px;
+  min-height: 100vh;
+}
+
+/* ==========================
+   APP CARD
+========================== */
+.app {
+  width: min(520px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+/* ==========================
+   HEADER
+========================== */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.theme-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.theme-btn:hover {
+  opacity: 0.85;
+}
+
+/* ==========================
+   FORM
+========================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+/* ==========================
+   STATUS + LYRICS
+========================== */
+.status {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lyrics {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  white-space: pre-wrap;
+  min-height: 220px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

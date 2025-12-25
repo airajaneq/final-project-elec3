@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Stopwatch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="stopwatch-card">
+        <header class="stopwatch-header">
+          <h1 class="stopwatch-title">Stopwatch</h1>
+          <p class="stopwatch-hint">⌨️ Space: Start/Pause, R: Reset</p>
+        </header>
+
+        <div class="time-display" aria-live="polite" aria-atomic="true" id="time">
+          00:00:00.00
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-primary" id="startPause" title="Start or pause the stopwatch">
+            <span class="btn-icon">▶</span>
+            <span class="btn-text">Start</span>
+          </button>
+          <button class="btn btn-secondary" id="reset" disabled title="Reset the stopwatch">
+            <span class="btn-icon">⟲</span>
+            <span class="btn-text">Reset</span>
+          </button>
+        </div>
+
+        <div class="laps-container">
+          <div id="lapsSection" class="laps-section hidden">
+            <h3 class="laps-title">Lap Times</h3>
+            <div id="lapsList" class="laps-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

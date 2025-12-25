@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lyrics Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>🎶 Lyrics Finder</h1>
+
+      <!-- ✅ Theme Toggle -->
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        ☀️
+      </button>
+    </header>
+
+    <div class="form">
+      <input id="artist" placeholder="Artist name..." />
+      <input id="title" placeholder="Song title..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <p id="status" class="status"></p>
+    <pre id="lyricsBox" class="lyrics"></pre>
+
+    <!-- ✅ Footer Credits -->
+    <footer class="footer">
+      Powered by <a href="https://lyricsovh.docs.apiary.io/" target="_blank" rel="noreferrer">Lyrics.ovh API</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

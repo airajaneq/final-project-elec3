@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Forecast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="weather-card">
+      <header class="weather-header">
+        <div class="header-top">
+          <h1 class="weather-title">Weather Forecast</h1>
+          <p class="weather-subtitle">Powered by OpenWeatherMap</p>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+          🌙
+        </button>
+      </header>
+
+      <div class="search-container">
+        <div class="input-row">
+          <input
+            type="text"
+            id="cityInput"
+            class="city-input"
+            placeholder="Enter a city name..."
+            autocomplete="off"
+          />
+          <button id="searchBtn" class="btn btn-search" title="Search for a city">
+            🔍 Search
+          </button>
+        </div>
+
+        <select id="placeSelect" class="place-select hidden" aria-label="Choose location"></select>
+      </div>
+
+      <div id="status" class="status" aria-live="polite" aria-atomic="true"></div>
+      <div id="errorBox" class="error-box hidden" role="alert"></div>
+
+      <!-- Current Weather Display -->
+      <div id="weatherResult" class="weather-result hidden">
+        <div class="weather-main">
+          <div class="weather-info">
+            <h2 id="cityName" class="city-name"></h2>
+            <p id="country" class="country"></p>
+            <p id="description" class="description"></p>
+          </div>
+
+          <div class="temp-block">
+            <span id="temp" class="temp"></span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="weather-detail">
+            <span class="detail-label">Feels like</span>
+            <span id="feelsLike" class="detail-value"></span>
+            <span class="detail-unit">°C</span>
+          </div>
+          <div class="weather-detail">
+            <span class="detail-label">Humidity</span>
+            <span id="humidity" class="detail-value"></span>
+            <span class="detail-unit">%</span>
+          </div>
+          <div class="weather-detail">
+            <span class="detail-label">Wind Speed</span>
+            <span id="wind" class="detail-value"></span>
+            <span class="detail-unit">m/s</span>
+          </div>
+          <div class="weather-detail">
+            <span class="detail-label">Pressure</span>
+            <span id="pressure" class="detail-value"></span>
+            <span class="detail-unit">hPa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Day Forecast Display -->
+      <div id="forecastBox" class="forecast-section hidden">
+        <h3 class="forecast-title">5-Day Forecast</h3>
+        <div id="forecastGrid" class="forecast-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
